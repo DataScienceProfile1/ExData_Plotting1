@@ -46,5 +46,5 @@
     png("plot2.png",width=480,height = 480)
     par(mfrow = c(1,1))
     plot(x = tblPowerSmall$DateTime, tblPowerSmall$Global_active_power, type="l",
-         col = "black",ylab = "Global Active Power",xlab = "")
+         col = "black",ylab = "Global Active Power (kilowatts)",xlab = "")
     dev.off()
