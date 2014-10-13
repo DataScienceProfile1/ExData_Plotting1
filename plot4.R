@@ -92,7 +92,7 @@
            bty = "n")
 # 4.4
     plot(x = tblPowerSmall$DateTime, y = tblPowerSmall$Global_reactive_power, type="l",
-         col = "black",ylab = "Global Active Power",xlab = "datetime",lwd=nwidth)
+         col = "black",ylab = "Global Reactive Power",xlab = "datetime",lwd=nwidth)
 
     dev.off()
     
