@@ -42,32 +42,6 @@
     tblPowerSmall <- mutate(tblPowerSmall,DateTime = ymd_hms(paste(tblPowerSmall$Date,tblPowerSmall$Time)))
     message("Generating plots")
     
-# Generate Plot 1
-    png("plot1.png",width=480,height = 480)
-    par(mfrow = c(1,1))
-    hist(tblPowerSmall$Global_active_power,col="red",
-         main = "Global Active Power",xlab = "Global Active Power (kilowatts)")
-    dev.off()
-# Generate Plot 2
-    png("plot2.png",width=480,height = 480)
-    par(mfrow = c(1,1))
-    plot(x = tblPowerSmall$DateTime, tblPowerSmall$Global_active_power, type="l",
-         col = "black",ylab = "Global Active Power",xlab = "")
-    dev.off()
-# Generate Plot 3
-    png("plot3.png",width=480,height = 480)
-    par(mfrow = c(1,1))
-    with(tblPowerSmall,
-         plot(x = DateTime, Sub_metering_1, type="l",
-              ylab = "Energy sub metering",xlab = ""))
-    with(tblPowerSmall,
-         lines(x = DateTime, y = Sub_metering_2, col = "red",))
-    with(tblPowerSmall,
-         lines(x = DateTime, y = Sub_metering_3, col = "blue"))
-    legend("topright", lty = 1 , col = c("black","red","blue"),
-           legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
-    dev.off()
-    
 # Generate Plot 4
 # Subdivide graphics field into 4 plots
     png("plot4.png",width=480,height = 480)
